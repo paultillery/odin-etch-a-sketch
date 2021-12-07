@@ -37,7 +37,13 @@ function makeDivsDrawable() {
     //Get all drawable divs; give them event listeners
     const drawableDivs = document.querySelectorAll(".drawableDiv");
     drawableDivs.forEach(div => div.addEventListener("mouseenter", function(e) {
-        e.target.classList.add("filledInBlack"); //Class approach
+        if(!e.target.classList.contains("darkened")) {
+            e.target.classList.add("darkened");
+        } else if(e.target.style.opacity !== "1" ){
+            e.target.style.opacity -= "-0.1";
+            //console.log("myOpacity = " + myOpacity);
+            //e.target.style.opacity = myOpacity.toString;
+        }
         e.stopPropagation();
     }));
 }
