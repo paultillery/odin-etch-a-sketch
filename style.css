@@ -1,0 +1,26 @@
+#canvas {
+    display: flex;
+    height: 400px;
+    width: 400px;
+
+    border-style: solid;
+    border-color: gray;
+    border-radius: 3px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.drawableDiv {
+    flex: auto;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+
+.filledInBlack {
+    background-color: black;
+}
